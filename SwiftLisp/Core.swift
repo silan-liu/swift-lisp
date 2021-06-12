@@ -82,9 +82,13 @@ extension SExpr {
     
     public static func read(_ expr: String) -> SExpr {
         let tokens = tokenize(expr)
+        
         let (_, expr) = parse(tokens: tokens)
         
-        return expr ?? .List([])
+        let result = expr ?? .List([])
+        
+        print("expr:\(result)")
+        return result
     }
         
     /// 将字符串解析为 token
@@ -155,7 +159,7 @@ extension SExpr {
         var parentNode = parentNode
         var remainTokens = tokens
         
-        while remainTokens.count > 0 {
+        while remainTokens.count > 0, i < remainTokens.count  {
             let token = remainTokens[i]
             
             switch token {
@@ -178,15 +182,22 @@ extension SExpr {
                 remainTokens = remainList
                 i = 0
                 
+                // 继续循环
+                continue
+                
             case .pClose:
                 // 匹配的右 )，直接返回剩余token + 子节点
                 let tokenList = Array(remainTokens[(i+1)..<remainTokens.count])
 
+//                print("pClose, \(tokenList), \(parentNode)")
+                
                 return (tokenList, parentNode)
                 
             case let .text(value):
                 // 添加到父节点
                 parentNode = appendNode(list: parentNode, node: SExpr.Atom(value))
+                
+//                print("text, \(parentNode)")
             }
             
             i += 1
