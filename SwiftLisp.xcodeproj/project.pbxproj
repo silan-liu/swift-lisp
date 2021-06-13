@@ -10,6 +10,9 @@
 		9DA02AF5267499BA00E92D7B /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA02AF4267499BA00E92D7B /* main.swift */; };
 		9DA02AFC26749B1600E92D7B /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA02AFB26749B1600E92D7B /* Core.swift */; };
 		9DA02AFE2674B1C600E92D7B /* Eval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA02AFD2674B1C600E92D7B /* Eval.swift */; };
+		9DA02B0626759C9300E92D7B /* SwiftLispTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA02B0526759C9300E92D7B /* SwiftLispTests.swift */; };
+		9DA02B0B2675A0D900E92D7B /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA02AFB26749B1600E92D7B /* Core.swift */; };
+		9DA02B0C2675A0E300E92D7B /* Eval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA02AFD2674B1C600E92D7B /* Eval.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,10 +32,20 @@
 		9DA02AF4267499BA00E92D7B /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		9DA02AFB26749B1600E92D7B /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
 		9DA02AFD2674B1C600E92D7B /* Eval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eval.swift; sourceTree = "<group>"; };
+		9DA02B0326759C9300E92D7B /* SwiftLispTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftLispTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DA02B0526759C9300E92D7B /* SwiftLispTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftLispTests.swift; sourceTree = "<group>"; };
+		9DA02B0726759C9300E92D7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9DA02AEE267499BA00E92D7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DA02B0026759C9300E92D7B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				9DA02AF3267499BA00E92D7B /* SwiftLisp */,
+				9DA02B0426759C9300E92D7B /* SwiftLispTests */,
 				9DA02AF2267499BA00E92D7B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				9DA02AF1267499BA00E92D7B /* SwiftLisp */,
+				9DA02B0326759C9300E92D7B /* SwiftLispTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +81,15 @@
 				9DA02AFD2674B1C600E92D7B /* Eval.swift */,
 			);
 			path = SwiftLisp;
+			sourceTree = "<group>";
+		};
+		9DA02B0426759C9300E92D7B /* SwiftLispTests */ = {
+			isa = PBXGroup;
+			children = (
+				9DA02B0526759C9300E92D7B /* SwiftLispTests.swift */,
+				9DA02B0726759C9300E92D7B /* Info.plist */,
+			);
+			path = SwiftLispTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,6 +112,23 @@
 			productReference = 9DA02AF1267499BA00E92D7B /* SwiftLisp */;
 			productType = "com.apple.product-type.tool";
 		};
+		9DA02B0226759C9300E92D7B /* SwiftLispTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9DA02B0A26759C9300E92D7B /* Build configuration list for PBXNativeTarget "SwiftLispTests" */;
+			buildPhases = (
+				9DA02AFF26759C9300E92D7B /* Sources */,
+				9DA02B0026759C9300E92D7B /* Frameworks */,
+				9DA02B0126759C9300E92D7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftLispTests;
+			productName = SwiftLispTests;
+			productReference = 9DA02B0326759C9300E92D7B /* SwiftLispTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -98,6 +139,9 @@
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					9DA02AF0267499BA00E92D7B = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					9DA02B0226759C9300E92D7B = {
 						CreatedOnToolsVersion = 12.5;
 					};
 				};
@@ -116,9 +160,20 @@
 			projectRoot = "";
 			targets = (
 				9DA02AF0267499BA00E92D7B /* SwiftLisp */,
+				9DA02B0226759C9300E92D7B /* SwiftLispTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DA02B0126759C9300E92D7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9DA02AED267499BA00E92D7B /* Sources */ = {
@@ -128,6 +183,16 @@
 				9DA02AFC26749B1600E92D7B /* Core.swift in Sources */,
 				9DA02AF5267499BA00E92D7B /* main.swift in Sources */,
 				9DA02AFE2674B1C600E92D7B /* Eval.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DA02AFF26759C9300E92D7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9DA02B0B2675A0D900E92D7B /* Core.swift in Sources */,
+				9DA02B0626759C9300E92D7B /* SwiftLispTests.swift in Sources */,
+				9DA02B0C2675A0E300E92D7B /* Eval.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +336,42 @@
 			};
 			name = Release;
 		};
+		9DA02B0826759C9300E92D7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F3JYQ7F95H;
+				INFOPLIST_FILE = SwiftLispTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duowan.SwiftLispTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9DA02B0926759C9300E92D7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = F3JYQ7F95H;
+				INFOPLIST_FILE = SwiftLispTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.duowan.SwiftLispTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -288,6 +389,15 @@
 			buildConfigurations = (
 				9DA02AF9267499BA00E92D7B /* Debug */,
 				9DA02AFA267499BA00E92D7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9DA02B0A26759C9300E92D7B /* Build configuration list for PBXNativeTarget "SwiftLispTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9DA02B0826759C9300E92D7B /* Debug */,
+				9DA02B0926759C9300E92D7B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
