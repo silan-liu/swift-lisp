@@ -182,22 +182,18 @@ extension SExpr {
                 remainTokens = remainList
                 i = 0
                 
-                // 继续循环
+                // 这句很重要，继续循环，否则会走到底部的 i+1
                 continue
                 
             case .pClose:
                 // 匹配的右 )，直接返回剩余token + 子节点
                 let tokenList = Array(remainTokens[(i+1)..<remainTokens.count])
-
-//                print("pClose, \(tokenList), \(parentNode)")
                 
                 return (tokenList, parentNode)
                 
             case let .text(value):
                 // 添加到父节点
                 parentNode = appendNode(list: parentNode, node: SExpr.Atom(value))
-                
-//                print("text, \(parentNode)")
             }
             
             i += 1
