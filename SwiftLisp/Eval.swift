@@ -9,7 +9,7 @@ import Foundation
 
 // 内置方法
 enum Builtins: String {
-    case quote, car, cdr, equal, atom, cons, cond, lambda, defun, list, println, eval
+    case quote, car, cdr, equal, atom, cons, cond, lambda, defun, println, eval
     
     /// 是否需要跳过计算，留给方法自行计算
     /// - Parameter atom: 原子值
@@ -325,7 +325,7 @@ private var defaultEnvironment: [String: Function] = {
         // 保存本地方法
         localContext[funName] = f
         
-        // 返回方法名，用于在 eval 时调用
+        // 返回方法名，用于调用方法
         return .Atom(funName)
     }
     

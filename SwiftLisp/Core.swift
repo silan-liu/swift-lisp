@@ -87,7 +87,6 @@ extension SExpr {
         
         let result = expr ?? .List([])
         
-        print("expr:\(result)")
         return result
     }
         
@@ -192,6 +191,7 @@ extension SExpr {
                 return (tokenList, parentNode)
                 
             case let .text(value):
+                
                 // 添加到父节点
                 parentNode = appendNode(list: parentNode, node: SExpr.Atom(value))
             }
