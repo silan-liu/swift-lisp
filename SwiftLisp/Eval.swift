@@ -159,7 +159,7 @@ private var defaultEnvironment: [String: Function] = {
         }
         
         // 计算 x 表达式的值
-        let result = parameters[1].eval(with: vars, for: values)
+        let result = parameters[1]
         
         switch result {
         case .Atom:
@@ -181,8 +181,8 @@ private var defaultEnvironment: [String: Function] = {
             return .List([])
         }
         
-        // 计算第一个参数表达式的值
-        let result = parameters[1].eval(with: vars, for: values)
+        // 第一个参数
+        let result = parameters[1]
         
         switch result {
         // 第一个参数是原子，组成新的列表
@@ -200,8 +200,8 @@ private var defaultEnvironment: [String: Function] = {
             return .List([])
         }
         
-        let r1 = parameters[1].eval(with: vars, for: values)
-        let r2 = parameters[2].eval(with: vars, for: values)
+        let r1 = parameters[1]
+        let r2 = parameters[2]
 
         
         if r1 == r2 {
